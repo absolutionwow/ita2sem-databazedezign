@@ -11,7 +11,7 @@ Hvis du læser filen inde i  VS-code, så kan du se den korrekte struktur ved at
 ```
 echo $DATABASE_URL
 ```
-Du burde få hele Neon URL'et printet ud i terminalen
+Du burde få hele Neon URL'en printet ud i terminalen
 
 -Hvis det ikke virker, så skrive følgende kommando
 ```
@@ -36,7 +36,7 @@ neondb=>
 
 -sql/02_seed.sql bruges til at putte data ind i tabellerne. Seed-filen skal indeholde oprindelig data, mens ændring af dataen i øvelser o.lign laves under queries
 
--queries/navn.sql bruges til at lave queries. Vi har fået hvert vores query skema, sådan at vi har muligheden for at lave opgaver med queries hver for sig.
+-queries/navn.sql bruges til at lave queries. Vi har fået hvert vores query-fil, så vi har muligheden for at lave opgaver med queries hver for sig.
 
 ## 4. Frisk opsætning af database
 -Spring over dette skridt, hvis der allerede er oprette en database
