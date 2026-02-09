@@ -29,6 +29,9 @@ BEGIN
         Til DATE
     )
 
-    INSERT INTO Bruger VALUES ()
+    INSERT INTO Bruger VALUES (101, "Jens", "jens@gmail.com");
+    INSERT INTO Bruger VALUES (102, "Mette", "mette@gmail.com");
+    INSERT INTO Bruger VALUES (103, "Henrik", "henrik@gmail.com");
+
 
 
