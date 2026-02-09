@@ -1,7 +1,5 @@
-CREATE DATABASE ShelterDB 
-LANGUAGE plpgsql
-AS $$
-BEGIN
+PRAGMA foreign_keys = on; 
+
 CREATE TABLE Bruger (
     BrugerID INT PRIMARY KEY,
     BrugerNavn TEXT,
@@ -56,6 +54,5 @@ INSERT INTO Booking VALUES
 (3, 102, 3, '2025-03-16', '2025-03-17'),
 (4, 103, 4, '2025-03-17', '2025-03-18'),
 (5, 103, 5, '2025-03-17', '2025-03-18');
-
 
 
