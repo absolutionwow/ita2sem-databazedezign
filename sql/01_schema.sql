@@ -1,30 +1,27 @@
 -- Define tables here
 CREATE TABLE Bruger (
-    BrugerID INT PRIMARY KEY,
-    BrugerNavn TEXT,
-    Email TEXT
+    BrugerID SERIAL PRIMARY KEY,
+    Navn VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Lokalitet (
-    LokalitetID INT PRIMARY KEY,
-    LokalitetNavn TEXT
+    LokalitetID SERIAL PRIMARY KEY,
+    Navn VARCHAR(100) NOT NULL,
 );
 
 CREATE TABLE Shelter (
-    ShelterID INT PRIMARY KEY,
-    ShelterNavn TEXT,
-    Areal INT,
-    Billede TEXT,
-    LokalitetID INT,
+    ShelterID SERIAL PRIMARY KEY,
+    Navn VARCHAR(100) NOT NULL,
+    LokalitetID INT NOT NULL,
     FOREIGN KEY (LokalitetID) REFERENCES Lokalitet(LokalitetID)
 );
 
 CREATE TABLE Booking (
-    BookingID INT PRIMARY KEY,
-    BrugerID INT,
-    ShelterID INT,
-    Fra DATE,
-    Til DATE,
-    FOREIGN KEY (BrugerID) REFERENCES Bruger(BrugerID),
-    FOREIGN KEY (ShelterID) REFERENCES Shelter(ShelterID)
+    BookingID SERIAL PRIMARY KEY,
+    BrugerID INT NOT NULL,
+    ShelterID INT NOT NULL,
+    Fra DATE NOT NULL,
+    Til DATE NOT NULL,
+    FOREIGN KEY (BrugerID) REFERENCES Bruger(BrugerID) ON DELETE CASCADE,
+    FOREIGN KEY (ShelterID) REFERENCES Shelter(ShelterID) ON DELETE CASCADE
 );
