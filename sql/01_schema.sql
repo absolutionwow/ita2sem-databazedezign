@@ -6,7 +6,7 @@ CREATE TABLE Bruger (
 
 CREATE TABLE Lokalitet (
     LokalitetID SERIAL PRIMARY KEY,
-    Navn VARCHAR(100) NOT NULL,
+    Navn VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Shelter (
