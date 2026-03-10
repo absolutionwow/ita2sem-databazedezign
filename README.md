@@ -15,7 +15,7 @@ Du burde få hele Neon URL'en printet ud i terminalen
 
 -Hvis det ikke virker, så skrive følgende kommando
 ```
-set -a && source.env && set+a
+set -a && source .env && set+a
 ```
 
 ## 2. Connect til Neon
